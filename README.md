@@ -1,4 +1,4 @@
-Código em Python do método de propagação de erros de Kleine e McClintock.
+## Código em Python do método de propagação de erros de Kleine e McClintock.
 
 Uso:
 digite quantas variáveis forem necessárias (separadas por ponto e vírgula) no dicionário do código no formato 'variavel = valor (+- ou -+) erro'.
