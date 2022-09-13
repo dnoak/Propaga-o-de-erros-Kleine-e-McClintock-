@@ -13,7 +13,7 @@ for i in range(0, 5):
     ex = i+1
     print('Exercício:', ex,'\n')
 
-    exercicios = {
+    exemplos = {
         1: {'variaveis': 'r1 = 20 +- 0.4; r2 = 300 +- 6',
             'equacoes': 'req = r1 + r2 ;req = 1/(1/r1 + 1/r2)'},
         2: {'variaveis': 'l = 1000 +- 2; a = 20+- 1; b=200 -+2; f=1000 +- 20; e = 210000 +- 21000',
@@ -26,13 +26,13 @@ for i in range(0, 5):
             'equacoes': 'r = r0*(1+a*(t-t0))'}
         }
 
-    variaveis = exercicios[ex]['variaveis'].upper().replace(' ', '').split(';')#input('Variáveis: ').upper()
+    variaveis = exemplos[ex]['variaveis'].upper().replace(' ', '').split(';')#input('Variáveis: ').upper()
     variaveis = [re.split(r'=|\+-|-\+', var) for var in variaveis ]
 
     for sym in variaveis:
         sym[0] = sympy.symbols(sym[0])
 
-    equacoes = exercicios[ex]['equacoes'].upper().replace(' ', '').split(';') 
+    equacoes = exemplos[ex]['equacoes'].upper().replace(' ', '').split(';') 
     equacoes = [eq.split('=') for eq in equacoes]
 
     for eq in equacoes:
